@@ -39,8 +39,6 @@ tj:
     appId: ${tj.tencent.appId}
     secretId: ${tj.tencent.secretId}
     secretKey: ${tj.tencent.secretKey}
-#    SecretId:AKID46xkLiphT5f9QSfe0GMGzTijW4NRPLIF
-#    SecretKey:ptmQxIQJxa0LXWMzOiJm133tWvutlPr7
     vod:
       enable: true
       vodValidSeconds: 7776000
