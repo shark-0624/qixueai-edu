@@ -13,25 +13,22 @@ spring:
       - nacos:${spring.application.name}.yaml # 导入本服务的配置
       - nacos:shared-spring.yaml # 共享spring配置
       - nacos:shared-redis.yaml # 共享redis配置
-      - nacos:shared-mybatis.yaml # 共享mybatis配置
       - nacos:shared-logs.yaml # 共享日志配置
       - nacos:shared-feign.yaml # 共享feign配置
-      - nacos:shared-mq.yaml # 共享mq配置
-      - nacos:shared-xxljob.yaml # 共享mq配置
-      - nacos:shared-seata.yaml # 共享seata配置
+      - nacos:shared-mybatis.yaml # 共享mybatis配置
 logging:
   level:
-    com.tianji: debug
-
-seata:
-  enabled: true
-  tx-service-group: tjxt
-  service:
-    vgroup-mapping:
-      tjxt: default
-    grouplist:
-      default: 192.168.150.101:8099   # 直连 Seata 服务端（端口根据实际情况）
-  registry:
-    type: file                         # 改为 file，不走 Nacos
-  config:
-    type: file                         # 改为 file
+    com:
+      #      alibaba: debug
+      tianji: debug
+#    org:
+#      springframework:
+#        ai:
+#          chat:
+#            client:
+#              advisor: DEBUG
+#      apache:
+#        hc:
+#          client5:
+#            http:
+#              wire: debug
